@@ -65,3 +65,7 @@ autonomous-enterprise-agent
     +---- Knowledge Agent
     |
     +---- Report Agent
+
+# Technologies Used
+langchain, langgraph, ollama, python, pydantic, fastapi, uvicorn, pytest, pytest-asyncio, pytest-mock
+
