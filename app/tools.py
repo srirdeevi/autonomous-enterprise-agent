@@ -35,7 +35,7 @@ class ToolExecutor:
                     }
                 )
 
-                results["rag"] = response.json()["answer"]
+                # results["rag"] = response.json()["answer"]
             elif tool == "summary":
 
                  results["summary"] = self.create_summary(results)

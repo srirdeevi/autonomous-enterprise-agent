@@ -1,3 +1,4 @@
+Built an autonomous enterprise AI agent with planning, tool execution, retrieval augmentation, memory, evaluation, and self-correction capabilities.
 # Architecure
                     User
                       │
@@ -25,27 +26,42 @@
                 Final Response
 
 # Real Agent Pattern
-                 User
-                  |
-                  v
-              Memory
-                  |
-                  v
-             AI Planner
-                  |
-                  |
-        +---------+---------+
-        |                   |
-        v                   v
-    Employee Tool          RAG Tool
-        |                   |
-        +---------+---------+
-                    |
-                    v
-                Summarizer
-                    |
-                    v
-                Memory Update
-                    |
-                    v
-                Final Response
+autonomous-enterprise-agent
+
+                 User Request
+                      |
+                      v
+                  Agent
+                      |
+        +-------------+-------------+
+        |             |             |
+        v             v             v
+     Memory       Planner       Executor
+                                  |
+                    +-------------+-------------+
+                    |                           |
+                    v                           v
+             Employee Tool                 RAG Tool
+                    |                           |
+                    +-------------+-------------+
+                                  |
+                                  v
+                              Summary
+                                  |
+                                  v
+                             Evaluator
+                                  |
+                         +--------+--------+
+                         |                 |
+                       PASS              FAIL
+
+
+# Enterprise Multi-Agent System
+
+    Supervisor Agent
+    |
+    +---- HR Agent
+    |
+    +---- Knowledge Agent
+    |
+    +---- Report Agent
